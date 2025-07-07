@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #eef; padding: 30px; text-align: center; }
+        .result-box {
+            background: white;
+            padding: 25px;
+            margin: auto;
+            display: inline-block;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+        .result { font-size: 24px; margin-top: 15px; }
+        .probability { font-size: 18px; color: gray; margin-top: 5px; }
+        .back-link { margin-top: 20px; display: inline-block; font-size: 16px; text-decoration: none; color: teal; }
+    </style>
+</head>
+<body>
+    <div class="result-box">
+        <h2>🔍 Prediction Result</h2>
+        <div class="result">{{ prediction }}</div>
+        <div class="probability">Probability of Lung Cancer: {{ prob }}</div>
+        <a href="/" class="back-link">⬅ Go Back</a>
+    </div>
+</body>
+</html>

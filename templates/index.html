@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lung Cancer Prediction</title>
+           
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e3f2f7;
+            height: 130vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .logo-left, .logo-right {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 400px;
+            opacity: 0.9;
+        }
+
+        .logo-left {
+            left: 15px;
+        }
+
+        .logo-right {
+            right: 15px;
+        }
+
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 25px 35px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            max-width: 400px;
+            width: 100%;
+            z-index: 2;
+        }
+
+        h2 {
+            text-align: center;
+            color: #007BFF;
+        }
+
+        label {
+            display: inline-block;
+            width: 160px;
+            font-size: 14px;
+            margin: 6px 0;
+        }
+
+        input {
+            width: 200px;
+            padding: 4px;
+            margin: 5px 0;
+        }
+
+        button {
+            margin-top: 18px;
+            padding: 7px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Reliable Animated Lung GIF -->
+<img src="https://i.pinimg.com/1200x/ac/45/9f/ac459f21ae2b07e29b6d559b3c240664.jpg" class="logo-left" alt="Lung Animation">
+<img src="https://i.pinimg.com/1200x/ac/45/9f/ac459f21ae2b07e29b6d559b3c240664.jpg" class="logo-right" alt="Lung Animation">
+
+<div class="form-container">
+    <h1>Lung Cancer Prediction</h1>
+    <H2>Please Enter 1= Yes, 0= No </H2>
+    <form action="/predict" method="POST">
+        <label>Age:</label><input type="number" name="AGE" required><br>
+        <label>Gender (0=M, 1=F):</label><input type="number" name="GENDER" min="0" max="1" required><br>
+        <label>Smoking (1/0):</label><input type="number" name="SMOKING" min="0" max="1" required><br>
+        <label>Finger Color (1/0):</label><input type="number" name="FINGER_DISCOLORATION" min="0" max="1" required><br>
+        <label>Stress (1/0):</label><input type="number" name="MENTAL_STRESS" min="0" max="1" required><br>
+        <label>Pollution (1/0):</label><input type="number" name="EXPOSURE_TO_POLLUTION" min="0" max="1" required><br>
+        <label>Illness (1/0):</label><input type="number" name="LONG_TERM_ILLNESS" min="0" max="1" required><br>
+        <label>Energy (0-10):</label><input type="number" step="0.01" name="ENERGY_LEVEL" required><br>
+        <label>Low Immunity (1/0):</label><input type="number" name="IMMUNE_WEAKNESS" min="0" max="1" required><br>
+        <label>Breathing (1/0):</label><input type="number" name="BREATHING_ISSUE" min="0" max="1" required><br>
+        <label>Alcohol (1/0):</label><input type="number" name="ALCOHOL_CONSUMPTION" min="0" max="1" required><br>
+        <label>Throat (1/0):</label><input type="number" name="THROAT_DISCOMFORT" min="0" max="1" required><br>
+        <label>Oxygen % (0-100):</label><input type="number" step="0.01" name="OXYGEN_SATURATION" required><br>
+        <label>Chest Tight (1/0):</label><input type="number" name="CHEST_TIGHTNESS" min="0" max="1" required><br>
+        <label>Family History (1/0):</label><input type="number" name="FAMILY_HISTORY" min="0" max="1" required><br>
+        <label>Smoke Family (1/0):</label><input type="number" name="SMOKING_FAMILY_HISTORY" min="0" max="1" required><br>
+        <label>Stress Immune (1/0):</label><input type="number" name="STRESS_IMMUNE" min="0" max="1" required><br>
+
+        <button type="submit">Predict</button>
+    </form>
+</div>
+
+</body>
+</html>
